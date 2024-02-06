@@ -1,0 +1,12 @@
+<b>List of users</b>
+
+<ul>
+<ol *ngFor="let user of users; index as i">{{i+1}}. {{user}}</ol>
+</ul>
+
+<button (click)="updateGrades()">Update grades</button> <br>
+<app-grades [grades]="updatedGrades" (newUser)="newUser($event)"></app-grades>
+
+<button (click)="getUsers()">Fetch Users</button>
+
+<p *ngFor="let userD of userInfo">{{userD.name}}</p>
